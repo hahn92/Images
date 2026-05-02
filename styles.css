@@ -323,3 +323,120 @@ footer {
 .tag-icon {
     font-size: 1.1rem;
 }
+
+.alerts-container {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.alerts-container:empty {
+    display: none;
+}
+
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.alert-icon {
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.alert-text code {
+    background: var(--surface-2);
+    padding: 0.05rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.alert-warn {
+    border-color: var(--warning);
+    background: rgba(245, 158, 11, 0.08);
+}
+
+.alert-error {
+    border-color: var(--error);
+    background: rgba(239, 68, 68, 0.08);
+}
+
+.alert-info {
+    border-color: var(--accent);
+    background: rgba(99, 102, 241, 0.08);
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    vertical-align: middle;
+    margin-right: 0.4rem;
+}
+
+.histogram-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 700px) {
+    .histogram-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+.histogram {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.histogram-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    letter-spacing: 0.05em;
+}
+
+.histogram-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 60px;
+    background: var(--surface-2);
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.histogram-bar {
+    flex: 1;
+    min-height: 1px;
+    border-radius: 1px;
+    opacity: 0.85;
+}
+
+.thumbnail-body {
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    background: var(--surface-2);
+}
+
+.embedded-thumbnail {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
